@@ -1,0 +1,13 @@
+version: '3.7'
+
+services:
+  bot:
+    container_name: tg_bot
+    image: tg_bot
+    build: .
+    volumes:
+      - .:/app
+      - /opt/.pycharm_helpers:/opt/.pycharm_helpers
+    command: python core/kittybot.py
+
+
